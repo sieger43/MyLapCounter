@@ -9,14 +9,8 @@ import UIKit
 
 class LapHistoryViewController: UIViewController {
     
-    var itemStore: LapHistoryRecordStore!
-    
     override func viewWillAppear(_ animated: Bool)
     {
-        let itemStore = LapHistoryRecordStore()
-        
-        let itemsController = self
-        itemsController.itemStore = itemStore
     }
     
     override func viewDidLoad() {
@@ -28,7 +22,7 @@ extension LapHistoryViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemStore.allItems.count
+        return MyLapCounterModel.allItems.count
     }
     
     func tableView(_ tableView: UITableView,
@@ -39,18 +33,16 @@ extension LapHistoryViewController: UITableViewDataSource {
         // Set the text on the cell with the description of the item
         // that is at the nth index of items, where n = row this cell
         // will appear in on the tableview
-        let item = itemStore.allItems[indexPath.row]
+        let item = MyLapCounterModel.allItems[indexPath.row]
         
         let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "yyyy-MM-dd"
-        
-        let now = item.dateCreated
+        dateFormatterPrint.dateFormat = "yyyy-MM-dd HH:mm:ss"
 
-        let nowString = dateFormatterPrint.string(from: now)
+        let nowString = dateFormatterPrint.string(from: item.dateCreated)
         
         cell.textLabel?.text = nowString
         
-        cell.detailTextLabel?.text = item.name
+        cell.detailTextLabel?.text = item.lapTime
 
         return cell
     }

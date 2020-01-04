@@ -24,6 +24,16 @@ class TimerViewController: UIViewController {
         }
     }
     
+    @IBAction func lapButtonAction(_ sender: Any) {
+        
+        if let timerUI = timerLabel, let timerUIstring = timerUI.text {
+            
+            let newItem = LapHistoryRecord(lapUILabelValue: timerUIstring)
+            
+            MyLapCounterModel.allItems.append(newItem)
+        }
+    }
+    
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var buttonLabel: UIButton!
     

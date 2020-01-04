@@ -6,20 +6,12 @@ import Foundation
 
 class LapHistoryRecord {
     
-    var name: String
+    var lapTime: String
     let dateCreated: Date
     
-    init(name: String) {
-        self.name = name
+    init(lapUILabelValue: String) {
+        
+        self.lapTime = lapUILabelValue
         self.dateCreated = Date()
     }
-    
-    convenience init(my_index: Int) {
-
-
-        let lapName = "00:00:0\(my_index)"
-
-        self.init(name: lapName)
-    }
-    
 }
