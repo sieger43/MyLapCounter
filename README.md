@@ -1,4 +1,4 @@
-# LapCounterMockup
+# MyLapCounter Application Description
 ## Lap Counter Screen
 ![screen_01](https://raw.githubusercontent.com/sieger43/LapCounterMockup/master/Screen_01.png)
 ### Start Button Behavior
