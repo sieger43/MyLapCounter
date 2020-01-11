@@ -6,11 +6,13 @@
 //  Copyright © 2019 John Berndt. All rights reserved.
 //
 import UIKit
+import CoreData
 
 class TimerViewController: UIViewController {
     
     var timer: Timer?
     var creationDate = Date()
+    var dataController:DataController!
     
     @IBAction func buttonAction(_ sender: Any) {
         
@@ -28,9 +30,15 @@ class TimerViewController: UIViewController {
         
         if let timerUI = timerLabel, let timerUIstring = timerUI.text {
             
-            let newItem = LapHistoryRecord(lapUILabelValue: timerUIstring)
+            //let newItem = LapHistoryRecord(lapUILabelValue: timerUIstring)
+            //
+            //MyLapCounterModel.allItems.append(newItem)
             
-            MyLapCounterModel.allItems.append(newItem)
+            let lapRecord = LapHistoryEntity(context: dataController.viewContext)
+            lapRecord.dateCreated = Date()
+            lapRecord.lapTime = timerUIstring;
+            
+            try? dataController.viewContext.save()
         }
     }
     

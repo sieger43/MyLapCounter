@@ -1,5 +1,9 @@
 //
-//  Copyright © 2015 Big Nerd Ranch
+//  LapHistoryRecord.swift
+//  LapHistoryRecord
+//
+//  Created by John Berndt on 1/4/20.
+//  Copyright © 2020 John Berndt. All rights reserved.
 //
 
 import UIKit
@@ -16,10 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         dataController.load()
-        
-//        let navigationController = window?.rootViewController as! UINavigationController
-//        let travelLocationMapViewController = navigationController.topViewController as! TravelLocationMapViewController
-//        travelLocationMapViewController.dataController = dataController
+
+        let tabbarcontroller = window?.rootViewController as! UITabBarController
+
+        if let vcs = tabbarcontroller.viewControllers {
+            
+            if vcs.count > 1 {
+                let timerTab = vcs[0] as! TimerViewController
+                let lapHistoryTab = vcs[1] as! LapHistoryViewController
+                
+                timerTab.dataController = dataController
+                lapHistoryTab.dataController = dataController
+            }
+        }
         
         return true
     }

@@ -3,7 +3,7 @@
 //  MyLapCounter
 //
 //  Created by John Berndt on 1/2/20.
-//  Copyright © 2020 Big Nerd Ranch. All rights reserved.
+//  Copyright © 2020 John Berndt. All rights reserved.
 //
 
 import Foundation

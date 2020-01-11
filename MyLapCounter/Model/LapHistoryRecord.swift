@@ -1,5 +1,9 @@
 //
-//  Copyright © 2015 Big Nerd Ranch
+//  LapHistoryRecord.swift
+//  LapHistoryRecord
+//
+//  Created by John Berndt on 1/4/20.
+//  Copyright © 2020 John Berndt. All rights reserved.
 //
 
 import Foundation

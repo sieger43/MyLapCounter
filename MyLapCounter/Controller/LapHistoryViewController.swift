@@ -6,11 +6,26 @@
 //  Copyright © 2020 John Berndt. All rights reserved.
 //
 import UIKit
+import CoreData
 
 class LapHistoryViewController: UIViewController {
     
-    override func viewWillAppear(_ animated: Bool)
-    {
+    var dataController:DataController!
+
+    var lapCounterRecords: [LapHistoryEntity] = []
+    
+    func refreshLapHistoryTable() {
+        
+        let fetchRequest:NSFetchRequest<LapHistoryEntity> = LapHistoryEntity.fetchRequest();
+        if let result = try? dataController.viewContext.fetch(fetchRequest) {
+            lapCounterRecords = result
+        }
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        
+        refreshLapHistoryTable()
     }
     
     override func viewDidLoad() {
@@ -20,9 +35,8 @@ class LapHistoryViewController: UIViewController {
 
 extension LapHistoryViewController: UITableViewDataSource {
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MyLapCounterModel.allItems.count
+        return lapCounterRecords.count
     }
     
     func tableView(_ tableView: UITableView,
@@ -33,17 +47,20 @@ extension LapHistoryViewController: UITableViewDataSource {
         // Set the text on the cell with the description of the item
         // that is at the nth index of items, where n = row this cell
         // will appear in on the tableview
-        let item = MyLapCounterModel.allItems[indexPath.row]
-        
+        let item = lapCounterRecords[indexPath.row]
+
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "yyyy-MM-dd HH:mm:ss"
 
-        let nowString = dateFormatterPrint.string(from: item.dateCreated)
+        if let cellDate = item.dateCreated, let cellLapTime = item.lapTime {
         
-        cell.textLabel?.text = nowString
-        
-        cell.detailTextLabel?.text = item.lapTime
+            let nowString = dateFormatterPrint.string(from: cellDate)
 
+            cell.textLabel?.text = nowString
+
+            cell.detailTextLabel?.text = cellLapTime
+        }
+        
         return cell
     }
 }
