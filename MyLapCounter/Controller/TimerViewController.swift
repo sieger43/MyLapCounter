@@ -45,6 +45,12 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var buttonLabel: UIButton!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        timerLabel.sizeToFit()
+    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
