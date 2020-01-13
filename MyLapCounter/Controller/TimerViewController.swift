@@ -10,6 +10,11 @@ import CoreData
 
 class TimerViewController: UIViewController {
     
+    struct TimerFontSize {
+        static let min : CGFloat = 72.0
+        static let max : CGFloat = 120.0
+    }
+    
     var timer: Timer?
     var creationDate = Date()
     var dataController:DataController!
@@ -30,10 +35,6 @@ class TimerViewController: UIViewController {
         
         if let timerUI = timerLabel, let timerUIstring = timerUI.text {
             
-            //let newItem = LapHistoryRecord(lapUILabelValue: timerUIstring)
-            //
-            //MyLapCounterModel.allItems.append(newItem)
-            
             let lapRecord = LapHistoryEntity(context: dataController.viewContext)
             lapRecord.dateCreated = Date()
             lapRecord.lapTime = timerUIstring;
@@ -49,11 +50,26 @@ class TimerViewController: UIViewController {
         super.viewWillAppear(animated)
         
         timerLabel.sizeToFit()
+        
+        if UIDevice.current.orientation.isLandscape {
+            timerLabel.font = timerLabel.font.withSize(TimerFontSize.max)
+        } else {
+            timerLabel.font = timerLabel.font.withSize(TimerFontSize.min)
+        }
     }
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        if UIDevice.current.orientation.isLandscape {
+            timerLabel.font = timerLabel.font.withSize(TimerFontSize.max)
+        } else {
+            timerLabel.font = timerLabel.font.withSize(TimerFontSize.min)
+        }
     }
 }
 
