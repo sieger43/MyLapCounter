@@ -12,17 +12,46 @@ class LapHistoryViewController: UIViewController {
     
     var dataController:DataController!
 
+    @IBOutlet var tableView: UITableView!
+
     var lapCounterRecords: [LapHistoryEntity] = []
     
     func refreshLapHistoryTable() {
-        
+
         let fetchRequest:NSFetchRequest<LapHistoryEntity> = LapHistoryEntity.fetchRequest();
         if let result = try? dataController.viewContext.fetch(fetchRequest) {
             lapCounterRecords = result
         }
-
+        self.tableView.reloadData()
     }
 
+    @IBAction func clearButtonAction(_ sender: Any) {
+        
+        // https://stackoverflow.com/questions/25511945/swift-alert-view-with-ok-and-cancel-which-button-tapped
+
+        let refreshAlert = UIAlertController(title: "Clear Lap History", message: "All data will be lost.",
+                                             preferredStyle: UIAlertController.Style.alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LapHistoryEntity")
+            let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+            do {
+                try self.dataController.viewContext.execute(batchDeleteRequest)
+                try self.dataController.viewContext.save()
+            } catch {
+                // Error Handling
+            }
+            
+            self.refreshLapHistoryTable()
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            // do nothing for cancel
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         refreshLapHistoryTable()

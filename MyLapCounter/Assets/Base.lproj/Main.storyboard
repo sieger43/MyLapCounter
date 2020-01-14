@@ -141,36 +141,36 @@
                                 <exclude reference="hE1-QI-zcr"/>
                                 <exclude reference="hfK-ua-mJQ"/>
                                 <exclude reference="yfm-cQ-CHA"/>
-                                <exclude reference="C3E-XT-hVW"/>
-                                <exclude reference="jsZ-dl-51U"/>
-                                <exclude reference="o94-xK-99m"/>
                                 <exclude reference="Vgw-eh-JGD"/>
                                 <exclude reference="XhA-SW-Zg9"/>
                                 <exclude reference="wPZ-ii-D5V"/>
+                                <exclude reference="C3E-XT-hVW"/>
+                                <exclude reference="jsZ-dl-51U"/>
+                                <exclude reference="o94-xK-99m"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
                                 <include reference="hE1-QI-zcr"/>
                                 <include reference="yfm-cQ-CHA"/>
-                                <include reference="o94-xK-99m"/>
                                 <include reference="Vgw-eh-JGD"/>
+                                <include reference="o94-xK-99m"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
                             <mask key="constraints">
                                 <include reference="QcE-cd-y2y"/>
                                 <include reference="hfK-ua-mJQ"/>
-                                <include reference="C3E-XT-hVW"/>
                                 <include reference="XhA-SW-Zg9"/>
+                                <include reference="C3E-XT-hVW"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
                                 <include reference="4AI-eF-efO"/>
                                 <include reference="5Oi-1A-6SN"/>
-                                <include reference="jsZ-dl-51U"/>
                                 <include reference="wPZ-ii-D5V"/>
+                                <include reference="jsZ-dl-51U"/>
                             </mask>
                         </variation>
                     </view>
@@ -350,6 +350,9 @@
                             <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Clear Lap History"/>
+                            <connections>
+                                <action selector="clearButtonAction:" destination="66W-v5-HZ5" eventType="touchUpInside" id="tD3-zd-g30"/>
+                            </connections>
                         </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="UIh-ad-h6F" detailTextLabel="LxJ-MP-kZj" style="IBUITableViewCellStyleValue1" id="Cq0-lc-WMe">
@@ -384,6 +387,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Lap" image="lap_list" landscapeImage="lap_list" largeContentSizeImage="lap_list" id="ji8-lL-mfJ"/>
                     <navigationItem key="navigationItem" id="riq-6S-wzY"/>
+                    <connections>
+                        <outlet property="tableView" destination="IqO-gP-0b7" id="AZ8-Uo-foC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4EN-KN-ldg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
