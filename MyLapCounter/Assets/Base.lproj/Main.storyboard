@@ -187,7 +187,7 @@
         <!--Weather-->
         <scene sceneID="81M-ac-9eh">
             <objects>
-                <viewController id="dmm-lj-gdx" sceneMemberID="viewController">
+                <viewController id="dmm-lj-gdx" customClass="WeatherForecastViewController" customModule="MyLapCounter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F4q-5X-FeK"/>
                         <viewControllerLayoutGuide type="bottom" id="qNO-C0-b6t"/>

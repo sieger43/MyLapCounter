@@ -14,6 +14,7 @@
 		6B64C1211B84C8EB00288BE3 /* LapHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B64C1201B84C8EB00288BE3 /* LapHistoryViewController.swift */; };
 		6B64C1231B84C9C900288BE3 /* LapHistoryRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B64C1221B84C9C900288BE3 /* LapHistoryRecord.swift */; };
 		9904125B23B5428000FB90C8 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9904125A23B5428000FB90C8 /* TimerViewController.swift */; };
+		99741FCA23D39FCC00B78A61 /* WeatherForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99741FC923D39FCC00B78A61 /* WeatherForecastViewController.swift */; };
 		99FA4AB823BECDD600D30E4D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FA4AB723BECDD600D30E4D /* DataController.swift */; };
 		99FA4ABE23BED36C00D30E4D /* MyLapCounter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99FA4ABC23BED36C00D30E4D /* MyLapCounter.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		6B64C1201B84C8EB00288BE3 /* LapHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LapHistoryViewController.swift; sourceTree = "<group>"; };
 		6B64C1221B84C9C900288BE3 /* LapHistoryRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LapHistoryRecord.swift; sourceTree = "<group>"; };
 		9904125A23B5428000FB90C8 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		99741FC923D39FCC00B78A61 /* WeatherForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastViewController.swift; sourceTree = "<group>"; };
 		99FA4AB723BECDD600D30E4D /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		99FA4ABD23BED36C00D30E4D /* MyLapCounter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyLapCounter.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 			children = (
 				9904125A23B5428000FB90C8 /* TimerViewController.swift */,
 				6B64C1201B84C8EB00288BE3 /* LapHistoryViewController.swift */,
+				99741FC923D39FCC00B78A61 /* WeatherForecastViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				TargetAttributes = {
 					6B64C0EE1B84C7C300288BE3 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 7ZV758UL5V;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -193,6 +197,7 @@
 				6B64C1231B84C9C900288BE3 /* LapHistoryRecord.swift in Sources */,
 				6B64C0F31B84C7C300288BE3 /* AppDelegate.swift in Sources */,
 				99FA4ABE23BED36C00D30E4D /* MyLapCounter.xcdatamodeld in Sources */,
+				99741FCA23D39FCC00B78A61 /* WeatherForecastViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7ZV758UL5V;
 				INFOPLIST_FILE = MyLapCounter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -341,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7ZV758UL5V;
 				INFOPLIST_FILE = MyLapCounter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
