@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import CoreLocation
 
 class WeatherForecastViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        var lat = (UIApplication.shared.delegate as! AppDelegate).lat
+        var lon = (UIApplication.shared.delegate as! AppDelegate).lon
     }
     
     override func viewDidLoad() {

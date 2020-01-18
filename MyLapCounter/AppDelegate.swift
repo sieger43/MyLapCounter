@@ -8,10 +8,16 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let locationManager = CLLocationManager()
+    
+    public var lat: Double = 0.0
+    public var lon: Double = 0.0
+    
     var window: UIWindow?
 
     let dataController = DataController(modelName: "MyLapCounter")
@@ -33,6 +39,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 lapHistoryTab.dataController = dataController
             }
         }
+        
+        locationManager.requestAlwaysAuthorization()
+        
+        // Used as a reference here - "Core Location Tutorial for iOS: Tracking Visited Locations"
+        // https://www.raywenderlich.com/5247-core-location-tutorial-for-ios-tracking-visited-locations
+        locationManager.startMonitoringSignificantLocationChanges()
+        locationManager.pausesLocationUpdatesAutomatically = true
+        locationManager.delegate = self
         
         return true
     }
@@ -105,3 +119,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+extension AppDelegate: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit) {
+
+        lat = visit.coordinate.latitude
+        lon = visit.coordinate.longitude
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if(locations.count > 0) {
+            lat = locations[0].coordinate.latitude
+            lon = locations[0].coordinate.longitude
+        }
+    }
+}
