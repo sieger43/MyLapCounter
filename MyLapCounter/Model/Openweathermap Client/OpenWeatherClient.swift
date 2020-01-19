@@ -11,7 +11,7 @@ import UIKit
 
 class OpenWeatherClient
 {
-    static let apiKey = ""
+    static let apiKey = "f3d151ecf10d27b33ad637e6ab726aa1"
     
     enum Endpoints {
         static let base = "https://api.openweathermap.org/data/2.5"
@@ -78,13 +78,18 @@ class OpenWeatherClient
         return task
     }
     
-    class func getCurrentWeather(completion: @escaping (Bool, Error?, WeatherInformation?) -> Void) {
+    class func getCurrentWeather(lat : Double, lon : Double, completion: @escaping (Bool, Error?, WeatherInformation?) -> Void) {
         
-        let qItems = [URLQueryItem(name: "q", value: "London,uk"),
+        // Example URL:
+        //
+        // http://api.openweathermap.org/data/2.5/weather?lat=43.21&lon=-77.69&APPID=f3d151ecf10d27b33ad637e6ab726aa1&units=imperial
+        
+        let qItems = [URLQueryItem(name: "lat", value : String(format:"%f", lat)),
+                      URLQueryItem(name: "lon", value : String(format:"%f", lon)),
                       URLQueryItem(name: "APPID", value: apiKey),
                       URLQueryItem(name: "units", value: "imperial")]
         
-        taskForGETRequest(url: Endpoints.currentweather.url, queryItems: qItems, responseType: WeatherInformation.self) { response, error in
+        let _ = taskForGETRequest(url: Endpoints.currentweather.url, queryItems: qItems, responseType: WeatherInformation.self) { response, error in
             if let response = response {
                 completion(true, nil, response)
             } else {
