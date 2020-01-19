@@ -15,6 +15,9 @@
 		6B64C1231B84C9C900288BE3 /* LapHistoryRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B64C1221B84C9C900288BE3 /* LapHistoryRecord.swift */; };
 		9904125B23B5428000FB90C8 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9904125A23B5428000FB90C8 /* TimerViewController.swift */; };
 		99741FCA23D39FCC00B78A61 /* WeatherForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99741FC923D39FCC00B78A61 /* WeatherForecastViewController.swift */; };
+		99D4CD0F23D3DCBE00897CB8 /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4CD0E23D3DCBE00897CB8 /* WeatherInformation.swift */; };
+		99D4CD1123D3DDC600897CB8 /* WeatherErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4CD1023D3DDC600897CB8 /* WeatherErrorResponse.swift */; };
+		99D4CD1323D3E09B00897CB8 /* OpenWeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4CD1223D3E09B00897CB8 /* OpenWeatherClient.swift */; };
 		99FA4AB823BECDD600D30E4D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FA4AB723BECDD600D30E4D /* DataController.swift */; };
 		99FA4ABE23BED36C00D30E4D /* MyLapCounter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99FA4ABC23BED36C00D30E4D /* MyLapCounter.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -30,6 +33,9 @@
 		6B64C1221B84C9C900288BE3 /* LapHistoryRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LapHistoryRecord.swift; sourceTree = "<group>"; };
 		9904125A23B5428000FB90C8 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		99741FC923D39FCC00B78A61 /* WeatherForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastViewController.swift; sourceTree = "<group>"; };
+		99D4CD0E23D3DCBE00897CB8 /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
+		99D4CD1023D3DDC600897CB8 /* WeatherErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherErrorResponse.swift; sourceTree = "<group>"; };
+		99D4CD1223D3E09B00897CB8 /* OpenWeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherClient.swift; sourceTree = "<group>"; };
 		99FA4AB723BECDD600D30E4D /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		99FA4ABD23BED36C00D30E4D /* MyLapCounter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyLapCounter.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,10 +80,29 @@
 			path = MyLapCounter;
 			sourceTree = "<group>";
 		};
+		99D4CD0C23D3DC2100897CB8 /* Openweathermap Client */ = {
+			isa = PBXGroup;
+			children = (
+				99D4CD0E23D3DCBE00897CB8 /* WeatherInformation.swift */,
+				99D4CD1223D3E09B00897CB8 /* OpenWeatherClient.swift */,
+			);
+			path = "Openweathermap Client";
+			sourceTree = "<group>";
+		};
+		99D4CD0D23D3DC3A00897CB8 /* Openweathermap Response */ = {
+			isa = PBXGroup;
+			children = (
+				99D4CD1023D3DDC600897CB8 /* WeatherErrorResponse.swift */,
+			);
+			path = "Openweathermap Response";
+			sourceTree = "<group>";
+		};
 		99FA4AB223BEC3E500D30E4D /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				99FA4AB623BECDA600D30E4D /* Data */,
+				99D4CD0C23D3DC2100897CB8 /* Openweathermap Client */,
+				99D4CD0D23D3DC3A00897CB8 /* Openweathermap Response */,
 				6B64C1221B84C9C900288BE3 /* LapHistoryRecord.swift */,
 			);
 			path = Model;
@@ -146,7 +171,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1030;
-				ORGANIZATIONNAME = "Big Nerd Ranch";
+				ORGANIZATIONNAME = "John Berndt";
 				TargetAttributes = {
 					6B64C0EE1B84C7C300288BE3 = {
 						CreatedOnToolsVersion = 7.0;
@@ -192,6 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9904125B23B5428000FB90C8 /* TimerViewController.swift in Sources */,
+				99D4CD0F23D3DCBE00897CB8 /* WeatherInformation.swift in Sources */,
+				99D4CD1123D3DDC600897CB8 /* WeatherErrorResponse.swift in Sources */,
+				99D4CD1323D3E09B00897CB8 /* OpenWeatherClient.swift in Sources */,
 				99FA4AB823BECDD600D30E4D /* DataController.swift in Sources */,
 				6B64C1211B84C8EB00288BE3 /* LapHistoryViewController.swift in Sources */,
 				6B64C1231B84C9C900288BE3 /* LapHistoryRecord.swift in Sources */,
