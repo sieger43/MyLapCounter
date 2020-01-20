@@ -337,7 +337,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather" image="sun_and_clouds" landscapeImage="sun_and_clouds" largeContentSizeImage="sun_and_clouds" id="YxQ-XR-Hys" userLabel="Lap"/>
                     <connections>
+                        <outlet property="conditionsValueLabel" destination="qgi-mw-eB4" id="CNS-01-nxk"/>
+                        <outlet property="humidityValueLabel" destination="UaM-ma-sqE" id="qNn-I9-55q"/>
+                        <outlet property="lastUpdatedLabel" destination="F3w-sr-4DQ" id="iYk-ZZ-M4Q"/>
                         <outlet property="locationValueLabel" destination="RWg-7B-cPj" id="PHc-CX-Eag"/>
+                        <outlet property="temperatureValueLabel" destination="LmC-AA-Jje" id="2Ze-mp-dtZ"/>
                         <outlet property="windValueLabel" destination="yP5-Um-14K" id="cvB-SP-nu7"/>
                     </connections>
                 </viewController>
