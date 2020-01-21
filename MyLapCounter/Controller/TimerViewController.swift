@@ -82,17 +82,9 @@ extension TimerViewController {
     
     @objc func updateTimer() {
         
-        let time = Date().timeIntervalSince(creationDate)
-
-        // Formatting snippit is from
-        // https://stackoverflow.com/questions/35215694/format-timer-label-to-hoursminutesseconds-in-swift/35215847
+        let currentTimeDate = TimeDateUtils.lapTime(lapTimeToDisplay: creationDate)
         
-        let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .positional // Use the appropriate positioning for the current locale
-        formatter.allowedUnits = [ .hour, .minute, .second ] // Units to display in the formatted string
-        formatter.zeroFormattingBehavior = [ .pad ] // Pad with zeroes where appropriate for the locale
-        
-        timerLabel.text  = formatter.string(from: time)
+        timerLabel.text  = currentTimeDate
     }
     
     func createTimer() {

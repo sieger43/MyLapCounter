@@ -78,12 +78,9 @@ extension LapHistoryViewController: UITableViewDataSource {
         // will appear in on the tableview
         let item = lapCounterRecords[indexPath.row]
 
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "yyyy-MM-dd HH:mm:ss"
-
         if let cellDate = item.dateCreated, let cellLapTime = item.lapTime {
         
-            let nowString = dateFormatterPrint.string(from: cellDate)
+            let nowString = TimeDateUtils.timeDate(dateTimeToDisplay: cellDate)
 
             cell.textLabel?.text = nowString
 

@@ -60,9 +60,31 @@ class WeatherForecastViewController: UIViewController {
         
         OpenWeatherClient.getCurrentWeather(lat: lat, lon: lon){ success, error, response in
             if success {
-                if let weatherData = response, let windData = weatherData.wind,
-                    let wind_speed = windData.speed {
-                    self.windValueLabel.text = String(format:"%f", wind_speed)
+                if let weatherData = response {
+                    if let main = weatherData.main{
+                        if let temp = main.temp {
+                            self.temperatureValueLabel.text = String(format:"%.0f", temp) + "\u{00B0} F"
+                        }
+                        if let humidity = main.humidity {
+                            self.humidityValueLabel.text = String(format:"%d", humidity) + " %"
+                        }
+                    }
+                    if let conds = weatherData.weather {
+                        let c = conds.compactMap( {$0.description })
+                        
+                        if c.count > 0 {
+                            self.conditionsValueLabel.text = c[0]
+                        }
+                    }
+                    
+                    if let windData = weatherData.wind, let wind_speed = windData.speed {
+                        self.windValueLabel.text = String(format:"%.2f", wind_speed) + " mph"
+                    }
+                }
+                
+                let currentTimeDate = TimeDateUtils.timeDate(dateTimeToDisplay: Date())
+                if let unwrappedTimeDate = currentTimeDate {
+                    self.lastUpdatedLabel.text = "(Last Updated: \(unwrappedTimeDate))"
                 }
             }
         }
