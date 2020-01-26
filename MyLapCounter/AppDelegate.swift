@@ -31,9 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if let vcs = tabbarcontroller.viewControllers {
             
-            if vcs.count > 1 {
+            if vcs.count > 2 {
                 let timerTab = vcs[0] as! TimerViewController
-                let lapHistoryTab = vcs[1] as! LapHistoryViewController
+                let navigationController = vcs[1] as! UINavigationController
+                let lapHistoryTab = navigationController.viewControllers[0] as! LapHistoryViewController
                 
                 timerTab.dataController = dataController
                 lapHistoryTab.dataController = dataController

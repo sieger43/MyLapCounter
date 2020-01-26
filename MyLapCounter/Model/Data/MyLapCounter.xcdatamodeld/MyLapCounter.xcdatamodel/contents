@@ -3,8 +3,10 @@
     <entity name="LapHistoryEntity" representedClassName="LapHistoryEntity" syncable="YES" codeGenerationType="class">
         <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="lapTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="LapHistoryEntity" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="LapHistoryEntity" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

@@ -19,6 +19,7 @@
 		99D4CD0F23D3DCBE00897CB8 /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4CD0E23D3DCBE00897CB8 /* WeatherInformation.swift */; };
 		99D4CD1123D3DDC600897CB8 /* WeatherErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4CD1023D3DDC600897CB8 /* WeatherErrorResponse.swift */; };
 		99D4CD1323D3E09B00897CB8 /* OpenWeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4CD1223D3E09B00897CB8 /* OpenWeatherClient.swift */; };
+		99D64C5F23DD1DC6009D839C /* TableRowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D64C5E23DD1DC6009D839C /* TableRowViewController.swift */; };
 		99FA4AB823BECDD600D30E4D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FA4AB723BECDD600D30E4D /* DataController.swift */; };
 		99FA4ABE23BED36C00D30E4D /* MyLapCounter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99FA4ABC23BED36C00D30E4D /* MyLapCounter.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		99D4CD0E23D3DCBE00897CB8 /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
 		99D4CD1023D3DDC600897CB8 /* WeatherErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherErrorResponse.swift; sourceTree = "<group>"; };
 		99D4CD1223D3E09B00897CB8 /* OpenWeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherClient.swift; sourceTree = "<group>"; };
+		99D64C5E23DD1DC6009D839C /* TableRowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowViewController.swift; sourceTree = "<group>"; };
 		99FA4AB723BECDD600D30E4D /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		99FA4ABD23BED36C00D30E4D /* MyLapCounter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyLapCounter.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 				6B64C1201B84C8EB00288BE3 /* LapHistoryViewController.swift */,
 				99741FC923D39FCC00B78A61 /* WeatherForecastViewController.swift */,
 				99A24EC023D69C5F00B00AC7 /* TimeDateUtils.swift */,
+				99D64C5E23DD1DC6009D839C /* TableRowViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			files = (
 				9904125B23B5428000FB90C8 /* TimerViewController.swift in Sources */,
 				99D4CD0F23D3DCBE00897CB8 /* WeatherInformation.swift in Sources */,
+				99D64C5F23DD1DC6009D839C /* TableRowViewController.swift in Sources */,
 				99D4CD1123D3DDC600897CB8 /* WeatherErrorResponse.swift in Sources */,
 				99D4CD1323D3E09B00897CB8 /* OpenWeatherClient.swift in Sources */,
 				99FA4AB823BECDD600D30E4D /* DataController.swift in Sources */,

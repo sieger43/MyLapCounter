@@ -38,7 +38,8 @@ class TimerViewController: UIViewController {
             let lapRecord = LapHistoryEntity(context: dataController.viewContext)
             lapRecord.dateCreated = Date()
             lapRecord.lapTime = timerUIstring;
-            
+            lapRecord.latitude = (UIApplication.shared.delegate as! AppDelegate).lat
+            lapRecord.longitude = (UIApplication.shared.delegate as! AppDelegate).lon
             try? dataController.viewContext.save()
         }
     }

@@ -62,6 +62,25 @@ class LapHistoryViewController: UIViewController {
     }
 }
 
+extension LapHistoryViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //        let selectedTrail = trails[indexPath.row]
+        //
+        //        if let viewController = storyboard?.instantiateViewController(identifier: "TrailViewController") as? TrailViewController {
+        //            viewController.trail = selectedTrail
+        //            navigationController?.pushViewController(viewController, animated: true)
+        //        }
+        let c = self.storyboard!.instantiateViewController(withIdentifier: "TableRowViewController") as! TableRowViewController
+        
+        DispatchQueue.main.async(execute: {
+            
+            self.navigationController!.pushViewController(c, animated: true)
+        })
+    }
+    
+}
+
 extension LapHistoryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
