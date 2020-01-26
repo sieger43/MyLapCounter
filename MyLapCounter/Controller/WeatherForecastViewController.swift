@@ -86,6 +86,15 @@ class WeatherForecastViewController: UIViewController {
                     self.lastUpdatedLabel.text = "(Last Updated: \(unwrappedTimeDate))"
                 }
             }
+            else
+            {
+                let connectionFailAlert = UIAlertController(title: "openweathermap.org", message: "Could Not Connect",
+                                                     preferredStyle: UIAlertController.Style.alert)
+                
+                connectionFailAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+
+                self.present(connectionFailAlert, animated: true, completion: nil)
+            }
         }
     }
 }
