@@ -33,7 +33,6 @@ class WeatherForecastViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
     @IBAction func updateButtonAction(_ sender: Any) {
         
         lat = (UIApplication.shared.delegate as! AppDelegate).lat

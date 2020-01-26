@@ -65,13 +65,18 @@ class LapHistoryViewController: UIViewController {
 extension LapHistoryViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        let selectedTrail = trails[indexPath.row]
-        //
-        //        if let viewController = storyboard?.instantiateViewController(identifier: "TrailViewController") as? TrailViewController {
-        //            viewController.trail = selectedTrail
-        //            navigationController?.pushViewController(viewController, animated: true)
-        //        }
+        
+        let selectedLapRecord = lapCounterRecords[indexPath.row]
+        
         let c = self.storyboard!.instantiateViewController(withIdentifier: "TableRowViewController") as! TableRowViewController
+
+        if let lapTime = selectedLapRecord.lapTime, let lapDate = selectedLapRecord.dateCreated {
+            c.lapTime = lapTime
+            c.lapDate = lapDate
+        }
+        
+        c.lat = selectedLapRecord.latitude
+        c.lon = selectedLapRecord.longitude
         
         DispatchQueue.main.async(execute: {
             
