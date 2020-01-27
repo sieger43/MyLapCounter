@@ -26,12 +26,22 @@ When the user rotates the screen to landscape, the timer text is now displayed w
 4. When clicking the Start Button when the counter text is other than 0:00:00, the text resets to 0:00:00 and starts counting up again.
 ### Lap Button Behavior
 1. Pressing the Lap Button saves the date/time and the current value of the lap counter to the table on the Lap History Screen.
-2. Pressing the Lap Button also causes the screen to flash (like when taking an iPhone screenshot) as feedback to the user that the lap counter value is saved.
 ## Lap Tab
 <kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_02.png" /></kbd>
 1. The table has the saved values of the time/date and the associated lap count from when the user clicks the Lap Button on the Lap Counter Screen.
-2. The data is persisted across application sessions by using CoreData.
-3. the Clear Lap History Button removes all of the UI table entries and all of the associated Core Data entries.
+2. Selecting a row in the table displays the details of the lap record entry.
+<br/>
+<br/>
+<kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_02a.png" /></kbd>
+<br/>
+<br/>
+3. The data persists across application sessions by using Core Data.
+4. The Clear Lap History Button removes all of the UI table entries and all of the associated Core Data entries after the user confirms the action.
+<br/>
+<br/>
+<kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_02b.png" /></kbd>
+<br/>
+<br/>
 ## Weather Screen
 <kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_03.png" /></kbd>
 1. The weather screen is to show the "pre-run" weather to the user to possibly make a go/no-go decision on a run.
