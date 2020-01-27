@@ -1,6 +1,8 @@
-# MyLapCounter README
+# MyLapCounter
+## Summary
+<place holder text>
 ## Lap Counter Screen
-![screen_01](https://raw.githubusercontent.com/sieger43/LapCounterMockup/master/Screen_01.png)
+![screen_01](https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_01.png?token=ACR6PGCHYNMUD6UEQYD6CYK6FYZCY)
 ### Start Button Behavior
 1. The Start Button initiates the counter. 
 2. When the user presses the Start Button, the text of button changes to "Stop".
