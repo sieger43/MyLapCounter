@@ -1,6 +1,6 @@
 # MyLapCounter
 ## Summary
-"My Lap Counter" is a timer application for use by runner's to capture "lap times" during the course of the run for example, at known milage points. A unique feature of "My Lap Counter" versus other available lap counter apps in the App Store is that "My Lap Counter" increases the size of the counter text when the user rotates the screen to landscape. Another unique feature is that "My Lap Counter" captures the geographic location of each lap time.
+"My Lap Counter" is a timer application for use by runners to capture "lap times" during the course of the run, for example, at known milage points. A unique feature of "My Lap Counter" versus other available lap counter apps in the App Store is that "My Lap Counter" increases the size of the counter text when the user rotates the screen to landscape. Another unique feature is that "My Lap Counter" captures the geographic location of each lap time.
 ## Time Tab
 The application uses Core Location to find the user's current location so that the Weather Tab can do a weather forecast lookup. The very first screen of a fresh install of "My Lap Counter" asks for permission to access the user's current location.
 <br/>
