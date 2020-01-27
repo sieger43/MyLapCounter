@@ -1,8 +1,8 @@
 # MyLapCounter
 
 ## Lap Counter Screen
-<kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_00.png?token=ACR6PGEN3LJMXKMTAZBYSK26FY2EW" /></kbd>
-<kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_01.png?token=ACR6PGGCVY56JA2AQNQEFFC6FY2KK" /></kbd>
+<kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_00.png" /></kbd>
+<kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_01.png" /></kbd>
 ### Start Button Behavior
 1. The Start Button initiates the counter. 
 2. When the user presses the Start Button, the text of button changes to "Stop".
