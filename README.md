@@ -51,6 +51,7 @@ When the user rotates the screen to landscape, the timer text is now displayed w
 <kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_03a.png" /></kbd>
 
 4. The user's current location is fetched using the Core Location services.
+5. The current weather condistions are persisted across application sessions by using UserDefaults.
 
 ## About Tab
 <br/>
