@@ -31,7 +31,6 @@ When the user rotates the screen to landscape, the timer text is now displayed w
 1. The table has the saved values of the time/date and the associated lap count from when the user clicks the Lap Button on the Lap Counter Screen.
 2. Selecting a row in the table displays the details of the lap record entry.
 <br/>
-<br/>
 <kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_02a.png" /></kbd>
 <br/>
 <br/>
