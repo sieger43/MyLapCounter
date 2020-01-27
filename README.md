@@ -37,15 +37,14 @@ When the user rotates the screen to landscape, the timer text is now displayed w
 3. The data persists across application sessions by using Core Data.
 4. The Clear Lap History Button removes all of the UI table entries and all of the associated Core Data entries after the user confirms the action.
 <br/>
-<br/>
 <kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_02b.png" /></kbd>
 <br/>
 <br/>
-## Weather Screen
+## Weather Tab
 <kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_03.png" /></kbd>
 1. The weather screen is to show the "pre-run" weather to the user to possibly make a go/no-go decision on a run.
 2. The weather uses the https://openweathermap.org/ API.
 3. The Update Button manually initiates a lookup of the current weather.
 4. The user's current location is fetched using the Core Location services https://developer.apple.com/documentation/corelocation/getting_the_user_s_location
-## About
+## About Tab
 <kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_04.png" /></kbd>
