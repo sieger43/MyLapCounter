@@ -27,6 +27,15 @@ class WeatherForecastViewController: UIViewController {
         
         lat = (UIApplication.shared.delegate as! AppDelegate).lat
         lon = (UIApplication.shared.delegate as! AppDelegate).lon
+        
+        // UserDefaults.standard.bool(forKey: "midnightThemeOn")
+        
+        locationValueLabel.text = UserDefaults.standard.string(forKey: "weatherLocation")
+        temperatureValueLabel.text = UserDefaults.standard.string(forKey: "weatherTemperature")
+        conditionsValueLabel.text = UserDefaults.standard.string(forKey: "weatherConditions")
+        windValueLabel.text = UserDefaults.standard.string(forKey: "weatherWind")
+        humidityValueLabel.text = UserDefaults.standard.string(forKey: "weatherHumidity")
+        lastUpdatedLabel.text = UserDefaults.standard.string(forKey: "weatherLastChecked")
     }
     
     override func viewDidLoad() {
@@ -49,6 +58,7 @@ class WeatherForecastViewController: UIViewController {
                     let firstLocation = placemarks?[0]
                     if let name = firstLocation?.name, let zip = firstLocation?.postalCode {
                         self.locationValueLabel.text = name + " " + zip
+                        UserDefaults.standard.set(self.locationValueLabel.text, forKey: "weatherLocation")
                     }
                 }
                 else {
@@ -85,6 +95,12 @@ class WeatherForecastViewController: UIViewController {
                 if let unwrappedTimeDate = currentTimeDate {
                     self.lastUpdatedLabel.text = "(Last Updated: \(unwrappedTimeDate))"
                 }
+
+                UserDefaults.standard.set(self.temperatureValueLabel.text, forKey: "weatherTemperature")
+                UserDefaults.standard.set(self.conditionsValueLabel.text, forKey: "weatherConditions")
+                UserDefaults.standard.set(self.windValueLabel.text, forKey: "weatherWind")
+                UserDefaults.standard.set(self.humidityValueLabel.text, forKey: "weatherHumidity")
+                UserDefaults.standard.set(self.lastUpdatedLabel.text, forKey: "weatherLastChecked")
             }
             else
             {

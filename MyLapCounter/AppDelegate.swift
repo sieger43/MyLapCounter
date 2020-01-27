@@ -22,8 +22,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let dataController = DataController(modelName: "MyLapCounter")
     
+    func checkIfFirstLaunch() {
+        if UserDefaults.standard.string(forKey: "weatherLastChecked") == nil {
+            UserDefaults.standard.set("unknown", forKey: "weatherLocation")
+            UserDefaults.standard.set("unknown", forKey: "weatherTemperature")
+            UserDefaults.standard.set("unknown", forKey: "weatherConditions")
+            UserDefaults.standard.set("unknown", forKey: "weatherWind")
+            UserDefaults.standard.set("unknown", forKey: "weatherHumidity")
+            UserDefaults.standard.set("(Last Updated: unknown)", forKey: "weatherLastChecked")
+        }
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        checkIfFirstLaunch() 
         
         dataController.load()
 
