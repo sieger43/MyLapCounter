@@ -34,6 +34,7 @@ When the user rotates the screen to landscape, the timer text is now displayed w
 <kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_02a.png" /></kbd>
 <br/>
 3. The data persists across application sessions by using Core Data.
+<br/>
 4. The Clear Lap History Button removes all of the UI table entries and all of the associated Core Data entries after the user confirms the action.
 <br/>
 <kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_02b.png" /></kbd>
