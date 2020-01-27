@@ -1,6 +1,5 @@
 # MyLapCounter
-## Summary
-<place holder text>
+
 ## Lap Counter Screen
 ![screen_01](https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_01.png?token=ACR6PGCHYNMUD6UEQYD6CYK6FYZCY)
 ### Start Button Behavior
