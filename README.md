@@ -11,7 +11,7 @@ The application uses Core Location to find the user's current location so that t
 Subsequent launches of "My Lap Counter" go directly to the "Time Tab".
 <br/>
 <br/>
-<kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_01.png" /></kbd> . 
+<kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_01.png" /></kbd> 
 <br/>
 <br/>
 When the user rotates the screen to landscape, the timer text is now displayed with a larger font size. 
@@ -43,11 +43,15 @@ When the user rotates the screen to landscape, the timer text is now displayed w
 ## Weather Tab
 <br/>
 <kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_03.png" /></kbd>
-<br/>
+
 1. The weather screen is to show the "pre-run" weather to the user to possibly make a go/no-go decision on a run.
 2. The weather uses the https://openweathermap.org/ API.
-3. The Update Button manually initiates a lookup of the current weather.
+3. The Update Button manually initiates a lookup of the current weather. If the look up fails, the user is prompted with an alert.
+<br/>
+<kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_03a.png" /></kbd>
+
 4. The user's current location is fetched using the Core Location services.
+
 ## About Tab
 <br/>
 <kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_04.png" /></kbd>
