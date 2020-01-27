@@ -3,10 +3,12 @@
 ## Time Tab
 The application uses Core Location to find the user's current location so that the Weather Tab can do a weather forecast lookup. The very first screen of a fresh install of "My Lap Counter" asks for permission to access the user's current location.
 <kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_00.png" /></kbd>
+
 Subsequent launches of "My Lap Counter" go directly to the "Time Tab".
 <kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_01.png" /></kbd>
+
 A unique feature of "My Lap Counter" versus other available lap counter apps in the App Store is that "My Lap Counter" increases the size of the counter text when the user rotates the screen to landscape. 
-<kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_01.png" /></kbd>
+<kbd><img src="https://raw.githubusercontent.com/sieger43/MyLapCounter/master/Screen_01a.png" /></kbd>
 ### Start Button Behavior
 1. The Start Button initiates the counter. 
 2. When the user presses the Start Button, the text of button changes to "Stop".
