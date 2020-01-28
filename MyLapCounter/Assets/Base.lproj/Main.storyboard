@@ -197,7 +197,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3d-Uo-tOy" userLabel="Update">
-                                <rect key="frame" x="134.5" y="240" width="51" height="30"/>
+                                <rect key="frame" x="134.5" y="277" width="51" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="fge-wg-C5W"/>
                                 </constraints>
@@ -207,7 +207,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Last Updated: never)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3w-sr-4DQ" userLabel="Last Updated">
-                                <rect key="frame" x="98" y="300" width="124" height="15"/>
+                                <rect key="frame" x="98" y="337" width="124" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="6Lf-Id-M9j"/>
                                 </constraints>
@@ -315,26 +315,33 @@
                                     <constraint firstItem="qxy-z0-hDU" firstAttribute="leading" secondItem="3C3-pQ-8B1" secondAttribute="leading" constant="118" id="Y2p-9Q-N8v"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="LSg-7F-KNf">
+                                <rect key="frame" x="150" y="222" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3C3-pQ-8B1" firstAttribute="leading" secondItem="AzK-Jb-eJp" secondAttribute="leadingMargin" constant="17" id="8W7-mH-ysc"/>
-                            <constraint firstItem="Yta-Wp-Lju" firstAttribute="centerX" secondItem="O3d-Uo-tOy" secondAttribute="centerX" id="Evj-qj-SyJ"/>
-                            <constraint firstItem="Yta-Wp-Lju" firstAttribute="top" secondItem="F4q-5X-FeK" secondAttribute="bottom" id="I3l-4o-bGv"/>
-                            <constraint firstItem="O3d-Uo-tOy" firstAttribute="centerX" secondItem="F3w-sr-4DQ" secondAttribute="centerX" id="LSb-Wr-ydv"/>
-                            <constraint firstItem="O3d-Uo-tOy" firstAttribute="top" secondItem="3C3-pQ-8B1" secondAttribute="bottom" constant="38" id="TDp-66-8Zj"/>
-                            <constraint firstItem="3C3-pQ-8B1" firstAttribute="top" secondItem="Yta-Wp-Lju" secondAttribute="bottom" constant="61" id="YlQ-pa-bPX"/>
-                            <constraint firstItem="Yta-Wp-Lju" firstAttribute="centerX" secondItem="AzK-Jb-eJp" secondAttribute="centerX" id="sK4-58-9lj"/>
-                            <constraint firstItem="F3w-sr-4DQ" firstAttribute="top" secondItem="O3d-Uo-tOy" secondAttribute="bottom" constant="30" id="tvq-13-xEG"/>
+                            <constraint firstItem="F3w-sr-4DQ" firstAttribute="top" secondItem="O3d-Uo-tOy" secondAttribute="bottom" constant="30" id="5Od-Hx-GuH"/>
+                            <constraint firstItem="LSg-7F-KNf" firstAttribute="centerX" secondItem="O3d-Uo-tOy" secondAttribute="centerX" id="Ucl-Fi-Mg1"/>
+                            <constraint firstItem="3C3-pQ-8B1" firstAttribute="top" secondItem="Yta-Wp-Lju" secondAttribute="bottom" constant="61" id="YAv-K2-Vyl"/>
+                            <constraint firstItem="Yta-Wp-Lju" firstAttribute="centerX" secondItem="LSg-7F-KNf" secondAttribute="centerX" id="cBe-Ov-ecN"/>
+                            <constraint firstItem="LSg-7F-KNf" firstAttribute="top" secondItem="3C3-pQ-8B1" secondAttribute="bottom" constant="20" id="eWh-k3-4oc"/>
+                            <constraint firstItem="O3d-Uo-tOy" firstAttribute="centerX" secondItem="F3w-sr-4DQ" secondAttribute="centerX" id="i6Z-fN-JzD"/>
+                            <constraint firstItem="Yta-Wp-Lju" firstAttribute="centerX" secondItem="AzK-Jb-eJp" secondAttribute="centerX" id="j3e-fn-nl8"/>
+                            <constraint firstItem="Yta-Wp-Lju" firstAttribute="top" secondItem="F4q-5X-FeK" secondAttribute="bottom" id="rao-m7-Fcg"/>
+                            <constraint firstItem="3C3-pQ-8B1" firstAttribute="leading" secondItem="AzK-Jb-eJp" secondAttribute="leadingMargin" constant="17" id="w1w-F4-dP5"/>
+                            <constraint firstItem="O3d-Uo-tOy" firstAttribute="top" secondItem="LSg-7F-KNf" secondAttribute="bottom" constant="35" id="wWc-6S-bX5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather" image="sun_and_clouds" landscapeImage="sun_and_clouds" largeContentSizeImage="sun_and_clouds" id="YxQ-XR-Hys" userLabel="Lap"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="LSg-7F-KNf" id="m3U-jF-t0Y"/>
                         <outlet property="conditionsValueLabel" destination="qgi-mw-eB4" id="CNS-01-nxk"/>
                         <outlet property="humidityValueLabel" destination="UaM-ma-sqE" id="qNn-I9-55q"/>
                         <outlet property="lastUpdatedLabel" destination="F3w-sr-4DQ" id="iYk-ZZ-M4Q"/>
                         <outlet property="locationValueLabel" destination="RWg-7B-cPj" id="PHc-CX-Eag"/>
                         <outlet property="temperatureValueLabel" destination="LmC-AA-Jje" id="2Ze-mp-dtZ"/>
+                        <outlet property="updateButtonOutlet" destination="O3d-Uo-tOy" id="oPe-Yb-6er"/>
                         <outlet property="windValueLabel" destination="yP5-Um-14K" id="cvB-SP-nu7"/>
                     </connections>
                 </viewController>

@@ -14,6 +14,8 @@ class WeatherForecastViewController: UIViewController {
     var lat : Double = 0.0
     var lon : Double = 0.0
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var locationValueLabel: UILabel!
     @IBOutlet weak var temperatureValueLabel: UILabel!
     @IBOutlet weak var conditionsValueLabel: UILabel!
@@ -21,6 +23,8 @@ class WeatherForecastViewController: UIViewController {
     @IBOutlet weak var humidityValueLabel: UILabel!
     
     @IBOutlet weak var lastUpdatedLabel: UILabel!
+    
+    @IBOutlet weak var updateButtonOutlet: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -36,13 +40,29 @@ class WeatherForecastViewController: UIViewController {
         windValueLabel.text = UserDefaults.standard.string(forKey: "weatherWind")
         humidityValueLabel.text = UserDefaults.standard.string(forKey: "weatherHumidity")
         lastUpdatedLabel.text = UserDefaults.standard.string(forKey: "weatherLastChecked")
+        
+        setBusy(false)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    func setBusy(_ busy: Bool) {
+        if busy {
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.isHidden = true
+            activityIndicator.stopAnimating()
+        }
+        
+        self.updateButtonOutlet.isEnabled = !busy
+    }
+    
     @IBAction func updateButtonAction(_ sender: Any) {
+        
+        setBusy(true)
         
         lat = (UIApplication.shared.delegate as! AppDelegate).lat
         lon = (UIApplication.shared.delegate as! AppDelegate).lon
@@ -111,6 +131,8 @@ class WeatherForecastViewController: UIViewController {
 
                 self.present(connectionFailAlert, animated: true, completion: nil)
             }
+            
+            self.setBusy(false)
         }
     }
 }
