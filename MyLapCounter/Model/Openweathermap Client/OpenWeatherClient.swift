@@ -11,7 +11,7 @@ import UIKit
 
 class OpenWeatherClient
 {
-    static let apiKey = "f3d151ecf10d27b33ad637e6ab726aa1"
+    static let apiKey = ""
     
     enum Endpoints {
         static let base = "https://api.openweathermap.org/data/2.5"
